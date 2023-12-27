@@ -1,12 +1,5 @@
 transformers 
 torch
 tensorflow
-docx
-pdfminer
 streamlit
-
-annotated_types
-python-docx
-pdfminer.six
-
-googletrans
+chardet
