@@ -9,6 +9,7 @@ def test_run_App():
        
     at.text_area[0].set_value('I can fly').run(timeout=30) # Вставка в поле текста на английском
     at.button[0].click().run(timeout=30) # Нажатие на кнопку "перевести"
+    assert at.markdown[0].value == "*Результаты перевода:*" # Сравнение надписи над переводом
     assert at.markdown[1].value == "Я умею летать." # Сравнение результата перевода на русский
     
     at.text_area[0].set_value('Я умею летать').run(timeout=30) # Вставка в поле текста на русском
