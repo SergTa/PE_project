@@ -3,3 +3,7 @@ torch
 tensorflow
 streamlit
 chardet
+
+--extra-index-url https://download.pytorch.org/whl/cpu
+sentencepiece
+httpx
