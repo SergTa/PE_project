@@ -49,8 +49,8 @@ def main():
         else:
           translated = tr_model_en_ru(content)
        
-        st.write('*Результаты перевода:*')# Показать надпись
-        st.write(translated ["translation_text"])#Показать результат перевода
+        st.markdown('*Результаты перевода:*')# Показать надпись
+        st.markdown(translated ["translation_text"])#Показать результат перевода
         
 
 
