@@ -7,3 +7,5 @@ chardet
 --extra-index-url https://download.pytorch.org/whl/cpu
 sentencepiece
 httpx
+
+sacremoses
