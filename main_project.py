@@ -15,10 +15,10 @@ def get_data():
   return text
 
 # Проверка введенного текста на принадлежность к русскому языку
-def dec_lan (text):
-  dec_lan = chardet.detect(text.encode('cp1251'))
+def detect_lang (text):
+  detect_lang = chardet.detect(text.encode('cp1251'))
   
-  return dec_lan['language']
+  return detect_lang['language']
 
             
 @st.cache_resource # Декоратор
@@ -43,7 +43,7 @@ def main():
        
     result = st.button('Перевести') # Кнопка Перевести
     if result:
-        d_lan = dec_lan (content) # Вызов функции определения языка, внесение введенного текста как аргумента, присвоение результата переменной
+        d_lan = detect_lang (content) # Вызов функции определения языка, внесение введенного текста как аргумента, присвоение результата переменной
         if d_lan == 'Russian': #Проверка не русский ли язык введен. Вызов модели русско-англ переводчика или англ-русского
           translated = tr_model_ru_en(content)
         else:
